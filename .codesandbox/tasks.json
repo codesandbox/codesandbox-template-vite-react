@@ -13,6 +13,11 @@
       "name": "yarn dev",
       "command": "yarn dev",
       "runAtStart": true
+    },
+    "update-files": {
+      "name": "Update App.tsx",
+      "command": "node update.js",
+      "runAtStart": true
     }
   }
 }
