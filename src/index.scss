@@ -1,0 +1,46 @@
+@use "@carbon/react";
+@use "@carbon/colors";
+
+// body {
+//   margin: 5rem;
+// }
+
+/* Content Switcher */
+.cds--content-switcher-btn {
+  background-color: white;
+  border: none;
+  border-top: 1px solid colors.$blue-30;
+  border-bottom: 1px solid colors.$blue-30;
+
+  &::after {
+    background-color: transparent !important;
+  }
+
+  &:first-child {
+    border-bottom-left-radius: 0.25rem;
+    border-left: 0.0625rem solid colors.$blue-30 !important;
+    border-top-left-radius: 0.25rem;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-right: 0.0625rem solid colors.$blue-30 !important;
+    border-top-right-radius: 0.25rem;
+  }
+
+  &::before {
+    background-color: colors.$blue-30;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &.cds--content-switcher--selected {
+    border: 1px solid colors.$blue-60 !important;
+    background-color: colors.$blue-10;
+    color: colors.$blue-60;
+
+    &::after {
+      background-color: colors.$blue-10;
+    }
+  }
+}
