@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.switcherWrapper {
+  flex: 3;
+  padding: 1rem;
+  margin: auto 0;
+}
+
+.optionsWrapper {
+  flex: 1;
+  border-left: 1px solid #e0e0e0;
+}
+
+.section {
+  align-items: center;
+  background-color: #e0e0e0;
+  display: flex;
+  font-size: 12px;
+  height: 2rem;
+  padding-left: 1rem;
+  width: 100%;
+  align-items: center;
+  background-color: #e0e0e0;
+  display: flex;
+  font-size: 12px;
+  height: 2rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.sectionContent {
+  padding: 1rem 0rem 1.5rem;
+}
+
+.cds--fieldset {
+  margin-bottom: 0;
+  padding: 0 1rem 1rem;
+}

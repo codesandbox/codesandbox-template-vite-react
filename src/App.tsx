@@ -7,6 +7,7 @@ import {
   Switch,
 } from "@carbon/react";
 import OmrsContentSwitcher from "./omrs-content-switcher";
+import "./app.scss";
 
 type SwitcherSize = "sm" | "md" | "lg";
 
@@ -24,43 +25,30 @@ function App() {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
-      <div style={{ flex: "3", padding: "1rem", margin: "auto 0" }}>
+    <div className="container">
+      <div className="switcherWrapper">
         <OmrsContentSwitcher errored={isErrored} size={switcherSize}>
-          <Switch name={"first"} text="First" disabled={isDisabled} />
-          <Switch name={"second"} text="Second" disabled={isDisabled} />
-          <Switch name={"third"} text="Third" disabled={isDisabled} />
+          <Switch
+            name={"firstSection"}
+            text="First section"
+            disabled={isDisabled}
+          />
+          <Switch
+            name={"secondSection"}
+            text="Second section"
+            disabled={isDisabled}
+          />
+          <Switch
+            name={"thirdSection"}
+            text="Third section"
+            disabled={isDisabled}
+          />
         </OmrsContentSwitcher>
       </div>
-      <form
-        style={{
-          flex: "1",
-          borderLeft: "1px solid lightgray",
-        }}
-      >
-        <div
-          style={{
-            alignItems: "center",
-            backgroundColor: "#e0e0e0",
-            display: "flex",
-            fontSize: "12px",
-            height: "2rem",
-            paddingLeft: "1rem",
-            width: "100%",
-          }}
-        >
-          Switch
-        </div>
-        <div
-          style={{
-            paddingBottom: "1.5rem",
-            paddingTop: "1rem",
-          }}
-        >
-          <fieldset
-            className="cds--fieldset"
-            style={{ marginBottom: "0", padding: "0 1rem 1rem" }}
-          >
+      <form className="optionsWrapper">
+        <div className="section">Switch</div>
+        <div className="sectionContent">
+          <FormGroup className="cds--fieldset">
             <legend className="cds--label">modifiers</legend>
             <Checkbox
               checked={isDisabled}
@@ -74,28 +62,11 @@ function App() {
               labelText="errored"
               id="errored"
             />
-          </fieldset>
+          </FormGroup>
         </div>
-        <div
-          style={{
-            alignItems: "center",
-            backgroundColor: "#e0e0e0",
-            display: "flex",
-            fontSize: "12px",
-            height: "2rem",
-            paddingLeft: "1rem",
-            width: "100%",
-          }}
-        >
-          ContentSwitcher
-        </div>
-        <div
-          style={{
-            paddingBottom: "1.5rem",
-            paddingTop: "1rem",
-          }}
-        >
-          <FormGroup style={{ marginBottom: "0", padding: "0 1rem 1rem" }}>
+        <div className="section">ContentSwitcher</div>
+        <div className="sectionContent">
+          <FormGroup className="cds--fieldset">
             <RadioButtonGroup
               defaultSelected={switcherSize}
               legendText="size"
