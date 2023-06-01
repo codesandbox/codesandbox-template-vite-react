@@ -1,0 +1,68 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.non-clickable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.tag-container {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.tag-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tag-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.tag-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.tag-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.tag {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.type-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag--selected {
+  color: green;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.epsilon-container {
+  input {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+  }
+}
